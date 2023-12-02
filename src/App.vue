@@ -1,9 +1,10 @@
 <template>
 <div>
-  <h1>Esta es mi app en Vue 3</h1>
+  <h1 id="h1">Esta es mi app en Vue 3</h1>
   <ul class="menu">
-    <router-link class="link" :to="{name:'Home'}">Home</router-link>
-    <router-link class="link" :to="{name:'Products'}">Products</router-link>
+    <router-link class="link" :to="{name:'HomeView'}">Home</router-link>
+    <router-link class="link" :to="{name:'ProductsView'}">Products</router-link>
+    <router-link class="link" :to="{name:'ContactView'}">Contact</router-link>
   </ul>
 </div>
 
@@ -24,6 +25,9 @@ export default {
 </script>
 
 <style scoped>
+#h1{
+  text-align: center;
+}
 .router-view{
   width: 100%;
   height: 400px;
@@ -32,7 +36,7 @@ export default {
 .menu{
   list-style-type: none;
   display: flex;
-  width: 200px;
+  width: 250px;
   height: 40px;
   align-items: center;
   border-radius: 4px;
