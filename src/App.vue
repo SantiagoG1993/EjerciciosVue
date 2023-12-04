@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="main_container">
   <h1 id="h1">Esta es mi app en Vue 3</h1>
   <ul class="menu">
     <router-link class="link" :to="{name:'HomeView'}">Home</router-link>
@@ -28,9 +28,10 @@ export default {
 #h1{
   text-align: center;
 }
+
 .router-view{
   width: 100%;
-  height: 400px;
+  min-height: 400px;
   background-color: rgb(218, 218, 218);
 }
 .menu{
