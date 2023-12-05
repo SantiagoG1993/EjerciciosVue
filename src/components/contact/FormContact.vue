@@ -28,6 +28,8 @@ mensaje.value=''
 agree.value=false
 }
 
+
+
 </script>
 
 <style scoped>

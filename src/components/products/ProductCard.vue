@@ -1,42 +1,21 @@
 <template>
-    <div class="card_container" v-for="producto of productos" :key="producto.id">
-        <h3>{{producto.name}}</h3>
-        <h4>{{producto.description}}</h4>
-        <p>Precio: ${{producto.precio}}</p>
+    <div class="card_container" >
+        <h3>{{props.productname}}</h3>
+        <h4>{{props.description}}</h4>
+        <p>Precio: ${{props.price}}</p>
         <button>Agregar al carrito</button>
-
     </div>
 </template>
 
 <script setup>
-import {ref} from 'vue'
-const productos = ref([
-    {
-        id:1,
-        name:'Remera',
-        price:4500,
-        description:'Remera talle L - Estampada'
-    },
-    {
-        id:2,
-        name:'Gorra',
-        price:3000,
-        description:'Gorra Sublimada'
-    },
-    {
-        id:3,
-        name:'Jarro termico',
-        price:5200,
-        description:'Jarro termico 500ml'
-    },
-    {
-        id:4,
-        name:'Mochila',
-        price:12000,
-        description:'Mochila escolar'
-    },
-])
+import{defineProps} from 'vue'
 
+    const props =defineProps({
+        productname:String,
+        price:String,
+        description:String
+    }
+)
 </script>
 
 <style scoped>
